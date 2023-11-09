@@ -41,7 +41,7 @@ window.onload = function () {
       });
 
   //запустить анимацию блоков при загрузке страницы
-  var blocksWindow = document.querySelectorAll('.contactus-window, .contactus-window__box');
+  var blocksWindow = document.querySelectorAll('.contactus-window__box');
   
   Array.from(blocksWindow).forEach(function (span) {
     var blockAbout = span.querySelectorAll('.contactus-window__box-top');
