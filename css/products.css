@@ -355,7 +355,7 @@ body {
   background: #de000d;
 }
 .page-box__btn_left {
-  left: 15px;
+  left: 0px;
 }
 .page-box__btn_left:hover {
   opacity: 1;
@@ -375,7 +375,7 @@ body {
   opacity: 0.5;
 }
 .page-box__btn_right {
-  right: 15px;
+  right: 0px;
 }
 .page-box__btn_right:hover {
   opacity: 1;
