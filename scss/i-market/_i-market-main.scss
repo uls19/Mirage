@@ -1,0 +1,157 @@
+.header {
+    flex: 0 0 auto;
+}
+
+.page-box1 {
+    @include page-box1;
+    background-image: url(./../img/cqban4.jpg);
+}
+
+//i-market main//
+.i-market-main {
+
+    flex: 1 0 auto;
+
+    @include mediaTablet {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    @include mediaMobile {
+        overflow-x: hidden;
+    }
+}
+
+.i-market-box1 {
+    @include homePage;
+    padding-bottom: 20px;
+}
+
+.i-market-line {
+    height: 1px;
+    background-color: rgba(239, 239, 239, 1);
+}
+
+.download {
+    padding-left: calc(50% - 740px / 2);
+    padding-right: calc(50% - 860px / 2);
+    min-height: 400px;
+    overflow: hidden;
+    padding-top: 25px;
+
+    &__box {
+        height: auto;
+        width: 100%;
+        background-color: transparent;
+        padding:12px;
+        border-width: 1px;
+        border-style: solid;
+        border-color: rgba(228,228,228,1);
+    }
+
+    &__card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 10px;
+    transition: background-color 0.3s;
+    
+    }
+    &__card:hover {
+        background-color: #ebeaea;
+    }
+
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 4px;
+        padding: 7px; 
+    }
+    &__link {
+        display: inline-block;
+        line-height: 0;
+        font-size: 10px;
+        color: #333333;
+        font-family: arial;
+        font-weight: 400;
+        text-align: left;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        text-decoration: none;
+        transition: color 0.2s ease;
+    }
+    &__link:hover {
+        color: #f28204;  
+    }
+
+&__items {
+    background-image: url(./../img/folder.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 10px;
+    display: inline-block;
+    color: #7f7f7f;
+    font-size: 8px;
+    padding-left: 12px; 
+
+}
+&__items-size {
+    background-image: url(./../img/pie.png);
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 10px;
+    margin-left: 10px;
+    display: inline-block;
+    color: #7f7f7f;
+    font-size: 8px;
+    text-align: right;
+    padding-left: 12px;
+
+}
+&__data {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    
+}
+
+&__time {
+display: inline-table;
+margin: 0;
+padding-bottom: 8px;
+vertical-align: middle;
+color: #969696;
+font-size: 9.5px;
+text-align: left;
+white-space: nowrap;
+overflow: visible;
+}
+&__button{
+    background-image: url(./../img/email.png);
+    background-repeat: no-repeat;
+    background-position: left 10px center;
+    background-size: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #f28204;
+    text-decoration: none;
+    height: 24px;
+    font-size: 12px;
+    line-height: 26px;
+    color: rgba(255, 255, 255, 1);
+    padding-right: 10px;
+    padding-left: 25px;
+    text-align: center;
+    transition: background 0.3s;
+}
+&__button:hover {
+    background-color: #004a54;  
+}
+
+&__title {
+    cursor:default;
+}
+
+}

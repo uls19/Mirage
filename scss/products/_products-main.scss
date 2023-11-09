@@ -1,0 +1,282 @@
+
+.header {
+    /* Высота «шапки» должна быть статичной и занимать столько места сколько ей нужно*/
+    /* 0 flex-grow, 0 flex-shrink, auto flex-basis */
+    flex: 0 0 auto;
+}
+.page-box1 {
+    @include page-box1;
+    background-image: url(./../img/miban_2.jpg);
+    
+    &__header {
+        color: #FF8C00;
+    }
+}
+
+//products main//
+.products-main {
+    flex: 1 0 auto;
+
+    @include mediaTablet {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    @include mediaMobile {
+        overflow-x: hidden;
+    }
+}
+
+.products-box1 {
+    @include homePage;
+    padding-bottom: 11px;
+}
+.products-line {
+    height: 1px;
+    background-color: rgba(239, 239, 239, 1);
+}
+
+.products-box {
+    display: flex;
+    justify-content: flex-start;
+    gap:20px;
+    flex-wrap: wrap;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: calc(50% - 750px / 2);
+    padding-right: calc(50% - 800px / 2);
+
+    &__categories {
+        width: 174px;
+
+        @include mediaMobile {
+        width: 140px;  
+        }
+    }
+
+    &__top {
+        background-color: rgba(0, 74, 84, 1);
+        height: 60px;
+
+        @include mediaMobile {
+              height: 50px; 
+            }
+    }
+
+    &__title {
+        color: #FFFFFF;
+        line-height: 60px;
+        font-size: 13px;
+        white-space: nowrap;
+        font-weight: normal;
+        padding-left: 15px;
+
+        @include mediaMobile {
+            line-height: 50px;
+          }
+    }
+
+    &__items {
+        border: 3px solid #F0F0F0;
+        height: 72px;
+    }
+
+    &__list1,
+    &__list2 {
+        position: relative;
+        display: block;
+        overflow: visible;
+        height: 50%;
+        width: 100%;
+        line-height: 27px;
+        cursor: pointer;
+        border-bottom: 1px solid rgba(228, 228, 228, 1);
+        background-image: url(./../img/right-arrow.png);
+        background-size: 8px;
+        background-repeat: no-repeat;
+        background-position: right 10px center;
+        transition: background-color 0.3s ease;
+
+        @include mediaMobile {
+            line-height: 24px;
+          }
+    }
+
+    &__link1,
+    &__link2 {
+        display: block;
+        padding: 6px 10px;
+        color: rgba(0, 0, 0, 1);
+        font-size: 9.5px;
+        text-align: left;
+        font-family: "arial";
+        font-weight: normal;
+        text-decoration: none;
+        transition: color 0.2s ease;
+    }
+
+    &__link1:hover,
+    &__link2:hover {
+        color: #FF8C00;
+    }
+
+    &__list1:hover &__article1,
+    &__list2:hover &__article2 {
+        display: block;
+        cursor: pointer;
+    }
+
+    &__article1,
+    &__article2 {
+        display: none;
+        position: absolute;
+        left: 169px;
+        z-index: 9;
+        
+        cursor: pointer;
+        border: 1px solid rgba(228, 228, 228, 1);
+        background-color: #FFFFFF;
+
+        @include mediaMobile {
+            left: 134px;
+          }
+    }
+
+    
+    &__article1 {
+        top: 5px;
+     } 
+     
+     &__article2 {
+       top:-28px; 
+     }
+
+    &__article-list:not(:last-child) {
+         border-bottom: 1px solid rgba(228, 228, 228, 1);
+    }
+
+
+    &__article-list {
+        display: block;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    &__article-link {
+        display: block;
+        width: 155px;
+        padding-left: 15px;
+        color: rgba(0, 0, 0, 1);
+        font-size: 9.5px;
+        text-align: left;
+        font-family: "arial";
+        line-height: 26px;
+        font-weight: normal;
+        text-decoration: none;
+        transition: background-color 0.2s ease;
+
+        @include mediaMobile {
+            width: 130px;
+          }
+    }
+
+    &__article-link:hover {
+        background-color: rgba(239, 248, 248, 1);
+        color: rgba(0, 0, 0, 0.5);
+    }
+
+    &__cards {
+        margin: 0 auto;
+        width: 565px;
+        border: 1px solid rgba(239, 239, 239, 1);
+    }
+
+
+    &__cards-top {
+        border-bottom: 3px solid rgba(239, 239, 239, 1);
+        height: 26px;
+    }
+
+    &__cards-line {
+        float: left;
+        background-color: #FF8C00;
+        width: 3px;
+        height: 110%;
+    }
+
+    &__cards-header {
+        padding-left: 10px;
+        line-height: 28px;
+        display: inline-block;
+        color: #f28204 !important;
+        font-size: 13px !important;
+    }
+
+    &__product {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        padding: 12px;
+        gap: 12px;
+
+        @include mediaTabletMode {
+            grid-template-columns: 1fr 1fr; 
+            padding: 8px;
+            gap: 8px;
+        }
+        @include mediaMobile {
+            grid-template-columns: 1fr; 
+        }
+
+    }
+
+    &__card {
+        position: relative;
+        min-width: 168px;
+        padding-bottom: 22px;
+        border: 2px solid rgba(243, 243, 243, 1);
+        margin: 0 auto;
+    }
+    &__card-link {
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+    &__card-image {
+        width: 168px;
+    }
+
+    &__card-title {
+        display: block;
+        font-family: arial;
+        margin-top: 6px;
+        min-width: 37px;
+        color: rgb(51, 51, 51);
+        font-size: 9.5px;
+        font-weight: 400;
+        text-align: center;
+        transition: color 0.3s ease;
+    }
+
+    &__card-link:hover &__card-title {
+        color: rgb(151, 151, 151);
+       
+    }
+
+    &__card-link::after {
+        opacity: 0;
+        content: "";
+        position: absolute;
+        z-index: 7;
+        left: -2px;
+        top: -2px;
+        right: -2px;
+        bottom: -2px;
+        border: 2px solid rgba(187, 187, 187, 0.4);
+        transition: opacity 0.2s ease-in;
+      }
+
+     &__card-link:hover::after{ 
+        opacity: 1;
+        
+     } 
+}

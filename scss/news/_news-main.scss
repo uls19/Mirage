@@ -1,0 +1,256 @@
+
+.header {
+    .header {
+        /* Высота «шапки» должна быть статичной и занимать столько места сколько ей нужно*/
+        /* 0 flex-grow, 0 flex-shrink, auto flex-basis */
+        flex: 0 0 auto;
+    }
+}
+
+.page-box1 {
+    @include page-box1;
+    background-image: url(./../img/cqban4.jpg);
+}
+
+//news-main//
+
+.news-main {
+    flex: 1 0 auto;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.news-box1 {
+    @include homePage;
+
+    &__menu {
+        overflow: hidden;
+        padding-left: calc(50% - 800px / 2);
+        padding-right: calc(50% - 800px / 2);
+        margin-bottom: 30px;
+    }
+
+    &__buttons {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 420px;
+
+        @include mediaMobile {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(3, 1fr);
+            column-gap: 0px;
+            row-gap: 5px;
+        }
+    }
+
+    &__list1,
+    &__list2,
+    &__list3 {
+        line-height: 28px;
+        border: 1px none rgba(228, 228, 228, 0);
+
+        @include mediaMobile {
+            width: 100%;
+        }
+    }
+
+    &__list4 {
+        @include mediaTabletMode {
+            grid-column: 1/3;
+        }
+    }
+
+    &__list2 {
+        @include mediaMobile {
+            grid-row: 2/3;
+        }
+    }
+
+    &__list3 {
+        @include mediaMobile {
+            grid-row: 3/4;
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+        color: rgba(255, 255, 255, 1);
+        white-space: nowrap;
+        font-size: 9.5px;
+        padding: 9px 25px;
+        border-radius: 4px;
+        background-color: #004a54;
+        transition: background-color 0.3s ease;
+
+        @include mediaMobile {
+            display: inline-block;
+            line-height: 20px;
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    &__link:hover {
+        background-color: rgb(242, 130, 4);
+    }
+}
+
+.news-line {
+    height: 1px;
+    background-color: rgba(239, 239, 239, 1);
+}
+
+.news {
+    position: relative;
+    padding-left: calc(50% - 740px / 2);
+    padding-right: calc(50% - 860px / 2);
+    min-height: 400px;
+    overflow: hidden;
+
+    &__box {
+        height: 100%;
+        padding-right: 8px;
+
+        @include mediaMobile {
+           padding-right: 0;
+        }
+    }
+
+    &__items {
+        padding-top: 14px;
+    }
+
+    &__list {
+        margin-bottom: 14px;
+        background: #f7f7f7;
+        max-width: 800px;
+        border: 1px solid transparent;
+        line-height: 1;
+        transition: box-shadow 0.3s ease;
+    }
+
+    &__link {
+        text-decoration: none;
+        font-size: 11px;
+        color: #717171;
+    }
+
+    &__content-box {
+        display: grid;
+        grid-template-columns: minmax(0px, 156px) 1fr 130px;
+
+        @include mediaTabletMode {
+            grid-template-columns: minmax(0px, 156px) 1fr;
+        }
+    }
+
+    &__content {
+        margin-top: 26px;
+        padding: 0 10px;
+
+        @include mediaTabletMode {
+            padding-left: 10px;
+            grid-column: 1/3;
+            grid-row: 2/3;
+        }
+
+    }
+
+    &__image {
+        box-sizing: content-box;
+        border: 10px solid transparent;
+        width: 133px;
+        height: 86px;
+        transition: border-color 0.3s ease;
+
+        @include mediaMobile {
+            border: 8px solid transparent;
+            width: 120px;
+            height: 78px;
+        }
+    }
+
+    &__text {
+        text-align: left;
+        margin-bottom: 18px;
+        font-size: 11px;
+    }
+
+    &__text_min {
+        font-size: 8.5px;
+        line-height: 16px;
+    }
+
+    &__data-box {
+        padding-left: 10px;
+        transition: padding-left 0.3s ease;
+
+        @include mediaTabletMode {
+            grid-column: 2/3;
+           
+        }
+    }
+
+    &__data {
+        padding-top: 26px;
+        padding-bottom: 26px;
+        color: #999;
+        font-size: 14px;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: left;
+        width: 114px;
+
+        @include mediaTabletMode {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+    }
+            &__button {
+            max-width: 90px;
+            border: 1px solid #ccc;
+            display: block;
+            font-size: 8px;
+            text-align: center;
+            box-sizing: border-box;
+            border-radius: 15px;
+            line-height: 20px;
+            color: #ccc;
+            transition: all 0.3s;
+        }
+
+        &__list:hover {
+           border: 1px solid #efefef;
+            box-shadow: 0 6px 10px 5px rgba(0, 0, 0, .08);
+        }
+
+        &__list:hover &__image {
+            border-color: #ccc;
+        }
+
+        &__list:hover &__button {
+            color: #ffffff;
+            border: 1px solid #ccc;
+            background-color:#ccc;
+        }
+  
+    //     @include mediaMobile {
+    //          &__list:hover {
+    //             border: 1px solid transparent;
+    //              box-shadow: none;
+    //       } 
+        
+    //      &__list:hover &__image {
+    //          border-color: #f7f7f7;
+    //      }
+
+    //      &__list:hover &__button {
+    //         color: #ffffff;
+    //         border: 1px solid #ccc;
+    //         background-color:#ccc;
+    //  }
+    //  }
+    }

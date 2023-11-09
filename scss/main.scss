@@ -1,0 +1,15 @@
+//Base
+@import "./base/reset";
+@import "./base/vars";
+@import "./base/mixins";
+@import "./base/base";
+
+//Blocks
+@import "./main/menu";
+@import "./main/header";
+@import "./base/nav-icon";
+@import "./main/products";
+@import "./main/about";
+@import "./main/news";
+@import "./main/messages";
+@import "./main/footer";

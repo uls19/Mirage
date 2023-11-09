@@ -1,0 +1,325 @@
+.header {
+    /* Высота «шапки» должна быть статичной и занимать столько места сколько ей нужно*/
+    /* 0 flex-grow, 0 flex-shrink, auto flex-basis */
+    flex: 0 0 auto;
+}
+
+.page-box1 {
+    @include page-box1;
+    background-image: url(./../img/nyliuyan.jpg);
+}
+
+//messages main//
+.messages-main {
+    /* Установим значение flex-grow равным 1, чтобы основное содержимое занимало все оставшееся место на странице. У остальных элементов flex-grow: 0, потому что их высота статична. */
+    /* 1 flex-grow, 0 flex-shrink, auto flex-basis */
+    flex: 1 0 auto;
+
+    @include mediaTablet {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    @include mediaMobile {
+        overflow-x: hidden;
+    }
+}
+
+.messages-box1 {
+    @include homePage;
+    padding-bottom: 20px;
+}
+
+.messages-line {
+    height: 1px;
+    background-color: rgba(239, 239, 239, 1);
+}
+
+.messages-window {
+    position: relative;
+    padding-left: calc(50% - 400px);
+    padding-right: calc(50% - 400px);
+    overflow: hidden;
+}
+
+.messages-box {
+    max-width: 800px;
+    min-height: 300px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    padding-left: calc(50% - 750px / 2);
+    padding-right: calc(50% - 800px / 2);
+
+
+    &__header {
+        height: 26px;
+        padding-right: 10px;
+        padding-left: 10px;
+        background-color: rgb(242, 130, 4);
+        line-height: 28px;
+        max-width: 600px;
+        color: rgb(255, 255, 255);
+        font-family: arial;
+        font-size: 11px;
+        font-weight: normal;
+        display: inline-block;
+    }
+
+    &__line {
+        height: 1px;
+        background-color: rgba(240, 240, 240, 1);
+    }
+
+    &__content {
+        box-sizing: border-box;
+        height: 100%;
+        width: 100%;
+        padding: 7px 10px;
+        border: 1px solid rgba(240, 240, 240, 1);
+    }
+
+    &__form {
+        position: relative;
+        display: grid;
+        grid-template-columns: 85px minmax(214px, 1fr);
+        grid-template-rows: 105px repeat(4, 22px) 18px 25px;
+        gap: 4px;
+
+        @include mediaMobile {
+            grid-template-columns: 85px minmax(0px, 1fr);
+            grid-template-rows: auto;
+        }
+    }
+
+    &__form-text {
+        @include mediaMobile {
+            grid-column: 1/3;
+        }
+    }
+
+    &__title {
+        padding-left: 7px;
+        color: #666666;
+        font-family: arial;
+        font-size: 9.5px;
+        line-height: 22px;
+        max-width: 9em;
+        overflow: hidden;
+        text-align: end;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        word-break: break-all;
+
+        @include mediaMobile {
+            max-width: 100%;
+            text-align: left;
+        }
+    }
+
+    &__title_color {
+        position: relative;
+        color: #FF8C00;
+    }
+
+    &__text {
+        grid-column: 2/3;
+        grid-row: 1/2;
+        resize: none;
+        border: 1px solid rgb(240, 240, 240);
+        width: 226px;
+        height: 100px;
+        padding: 5px;
+        font-family: arial;
+        font-size: 9.5px;
+
+        @include mediaMobile {
+            grid-column: 1/3;
+            grid-row: 2/3;
+
+        }
+    }
+
+    &__text:hover {
+        border-color: #FF8C00;
+    }
+
+    &__name {
+        @include mediaMobile {
+            grid-column: 1/3;
+            grid-row: 3/4;
+
+        }
+    }
+
+    &__error {
+        max-width: 100px;
+        display: none;
+        text-align: center;
+        position: absolute;
+        top: -6px;
+        z-index: 100;
+        left: 282px;
+        font-size: 9.5px;
+        padding: 3px 7px;
+        font-family: arial;
+        font-style: normal;
+        white-space: nowrap;
+        color: #707070;
+        border: 1px solid #c6cbd0;
+        background-image: linear-gradient(to bottom, #FAFBFB 0%, #E5E6E7 100%);
+        border-radius: 2px;
+        box-sizing: border-box;
+        box-shadow: 0px 8px 18px 0px rgba(42, 101, 95, 0.19);
+
+        @include mediaMobile {
+            top: 0px;
+            left: 168px;
+
+        }
+    }
+
+    &__error-image {
+        width: 16px;
+    }
+
+    &__input-content {
+        padding: 4px 8px;
+        color: #666666;
+        font-family: arial;
+        font-size: 9.5px;
+        width: 226px;
+        border: 1px solid rgba(240, 240, 240, 1);
+    }
+
+    &__input-content:hover {
+        border-color: #FF8C00;
+    }
+
+    &__input-name {
+        @include mediaMobile {
+            grid-column: 1/3;
+            grid-row: 4/5;
+        }
+    }
+
+    &__number {
+        @include mediaMobile {
+            grid-column: 1/3;
+            grid-row: 5/6;
+        }
+    }
+
+    &__input-number {
+        @include mediaMobile {
+            grid-column: 1/3;
+            grid-row: 6/7;
+        }
+    }
+
+    &__verific {
+
+        @include mediaMobile {
+            grid-column: 1/3;
+            grid-row: 7/8;
+        }
+    }
+
+    &__input-verific {
+        width: 110px;
+
+        @include mediaMobile {
+            grid-column: 1/3;
+            grid-row: 8/9;
+        }
+    }
+
+    &__captha {
+        border: 1px solid rgba(240, 240, 240, 0.1);
+        background-image: url(./../img/get.gif);
+        background-size: 56px 20px;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 62px;
+        margin-left: 23px;
+
+        @include mediaMobile {
+            grid-column: 1/3;
+            grid-row: 9/10;
+            height: 22px;
+        }
+
+    }
+
+    &__captha:hover {
+        border: 1px solid rgba(240, 240, 240, 1);
+        cursor: pointer;
+    }
+
+    &__title-change {
+        grid-column: 1/2;
+        grid-row: 6/7;
+        text-decoration: none;
+        line-height: 13px;
+        font-size: 8px;
+        color: #666666;
+        font-family: arial;
+
+        @include mediaMobile {
+            grid-column: 1/2;
+            grid-row: 10/11;
+
+        }
+    }
+
+    &__link-change {
+        grid-column: 2/3;
+        grid-row: 6/7;
+        display: flex;
+        justify-content: flex-end;
+        padding: 0 30px;
+
+        @include mediaMobile {
+            grid-column: 2/3;
+            grid-row: 10/11;
+
+        }
+    }
+
+    &__button {
+        grid-column: 1/3;
+        grid-row: 7/8;
+        width: 100px;
+        border: none;
+        border-radius: 4px;
+        background-color: #f28204;
+        text-decoration: none;
+        height: 26px;
+        margin-left: 50px;
+        font-size: 12px;
+        line-height: 26px;
+        color: rgba(255, 255, 255, 1);
+        text-align: center;
+        transition: background 0.3s;
+
+        @include mediaMobile {
+            grid-column: 1/3;
+            grid-row: 11/12;
+        }
+
+    }
+
+    &__button:hover {
+        background-color: #004a54;
+    }
+}
+
+
+::-webkit-input-placeholder {
+    /* WebKit browsers */
+    color: rgb(180, 180, 180);
+}
+
+textarea,
+.messages-box__input-content {
+    outline: 0 !important;
+}

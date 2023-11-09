@@ -1,0 +1,151 @@
+.footer {
+    overflow: hidden;
+    height: 290px;
+    background: #006677;
+    flex: 0 0 auto;
+
+    @include mediaTablet {
+        height: auto;  
+    }
+
+    &__box {
+        display: grid;
+        grid-template-columns: 216px 152px 122px 130px 1fr;
+        padding-top: 34px;
+        max-width: 768px;
+        margin: 0 auto;
+        padding-bottom: 68px;
+
+        @include mediaTablet {
+            padding: 34px 15px 34px;
+        }
+        @include mediaTabletMode {
+            overflow: hidden;
+            grid-template-columns: 1fr 1fr; 
+            grid-template-rows: auto; 
+        }
+    }
+
+    &__item1 {
+        grid-column: 1/2;
+    }
+
+    &__item2 {
+        padding-left: 58px;
+    }
+
+    &__item3 {
+        padding-left: 36px;
+    }
+
+    &__item4 {
+        padding-left: 34px;
+    }
+
+    &__item5 {
+        padding-left: 53px;
+        background-image: url(./../img/ma1.png);
+        background-repeat: no-repeat;
+        background-size: 80px;
+        background-position: top 38px right 10px;
+
+        @include mediaTablet {
+           display: none;
+        }
+    }
+
+    &__item1,
+    &__item2,
+    &__item3,
+    &__item4 {
+        @include mediaTabletMode {
+            padding-left: 20px;  
+         }
+    }
+
+    &__item-header {
+        font-size: 14px;
+        color: #FFFFFF;
+        line-height: 1.75em;
+        word-break: break-word;
+        font-family: "arial";
+    }
+
+    &__item-header1 {
+        padding-top: 10px;
+        font-size: 12px;
+        color: #FFFFFF;
+        word-break: break-word;
+        font-family: "arial";
+    }
+
+    &__item-content1, 
+    &__item-content2, 
+    &__item-content3, 
+    &__item-content4 {
+        padding-top: 14px;
+        border-right: 1px solid #4f6279;
+        min-height: 120px;
+
+        @include mediaTablet {
+            padding-right: 20px;
+            min-height: auto;
+        }
+    }
+
+    &__item-content2,
+    &__item-content4 {
+        @include mediaTabletMode {
+        border: none;
+        }
+    }
+
+    &__item-text {
+        font-family: arial, helvetica, sans-serif;
+        line-height: 2.1;
+        font-size: 9.5px;
+        color: #F0F8FF;
+    }
+
+    &__item-text1 {
+        font-family: arial, helvetica, sans-serif;
+        line-height: 1.75;
+        font-size: 9.5px;
+        color: #F0F8FF;
+    }
+
+    &__item-center {
+        padding-left: 14px;
+    }
+
+    &__item-link {
+        color: #F0F8FF;
+        padding: 3px 0;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    &__item-link:hover {
+        color: rgba(242, 130, 4, 1);
+
+    }
+
+    &__years {
+        background-color: #000;
+        padding: 9px;
+    }
+
+    &__year {
+        position: relative;
+    }
+
+    &__text {
+        text-align: center;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 26px;
+        color: #B8B8B8;
+    }
+}

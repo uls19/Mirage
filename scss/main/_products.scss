@@ -1,0 +1,124 @@
+/* Установим значение flex-grow равным 1, чтобы основное содержимое занимало все оставшееся место на странице. У остальных элементов flex-grow: 0, потому что их высота статична. */
+/* 1 flex-grow, 0 flex-shrink, auto flex-basis */
+.home-main {
+    flex: 1 0 auto;
+}
+
+.products {
+    margin: 0px auto;
+    max-width: 1280px;
+    height: auto;
+    text-align: center;
+    overflow-x: hidden;
+
+    &__header {
+        padding-top: 45px;
+        padding-bottom: 30px;
+
+        @include header;
+
+        @include mediaTablet {
+            padding-top: 25px;
+            padding-bottom: 20px;
+            font-size: 17px;
+        }
+    }
+
+    .products-cards {
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 0px auto;
+        max-width: 792px;
+        height: 218px;
+        gap: 30px;
+
+        @include mediaTablet {
+            height: 176px;
+            gap: 20px;
+            max-width: 620px;
+        }
+
+        @include mediaTabletMode {
+            grid-template-columns: 1fr;
+            grid-template-rows: 176px 176px;
+            height: 370px;
+        }
+    }
+
+    &__box {
+        padding-top: 50px;
+        padding-left: 35px;
+        width: 90%;
+        height: 77%;
+    }
+
+    &__wrapper {
+        position: absolute;
+        margin: 0 auto;
+        text-align: start;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        transition:
+            transform 1s ease,
+            opacity 1s ease,
+            background-size 0.8s ease;
+        z-index: 102;
+        width: 376px;
+        height: 216px;
+
+        @include mediaTablet {
+            width: 300px;
+            height: 174px;
+        }
+
+        @include mediaTabletMode {
+            width: auto;
+            max-width: 368px;
+        }
+    }
+
+    &__left {
+        background-image: url(./../img/mekchanp1.png);
+        transform: translateX(-130%);
+        opacity: 0;
+
+        @include mediaTabletMode {
+            left: 0;
+            right: 0;
+        }
+    }
+
+    &__left:hover {
+        background-size: 120%;
+    }
+
+    &__right {
+        background-image: url(./../img/meqchanp2.png);
+        transform: translateX(130%);
+        opacity: 0;
+        right: 0;
+
+        @include mediaTabletMode {
+            grid-row: 2/3;
+            right: 0;
+            left: 0;
+        }
+    }
+
+    &__right:hover {
+        background-size: 120%;
+    }
+
+    &__link {
+        text-decoration: none !important;
+    }
+
+    &__text {
+        font-size: 17px;
+        color: #FFFFFF;
+        font-weight: 600;
+    }
+
+}

@@ -1,0 +1,117 @@
+.header {
+    /* Высота «шапки» должна быть статичной и занимать столько места сколько ей нужно*/
+    /* 0 flex-grow, 0 flex-shrink, auto flex-basis */
+    flex: 0 0 auto;
+}
+
+.page-box {
+    position: relative;
+    min-height: 430px;
+
+    &__list {
+        position: absolute;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+    }
+
+    .single-slide1,
+    .single-slide2 {
+        display: block;
+        max-width: 1280px;
+        height: 430px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        transition: 0.8s;
+    }
+
+    .single-slide1 {
+        background-image: url(./../img/Banner_1.jpg);
+        background-color: #f3f3f3;
+
+        @include mediaTablet {
+            background-position: 59% 50%;
+        }
+    }
+
+    .single-slide2 {
+        background-image: url(./../img/Banner_2.jpg);
+
+        @include mediaTablet {
+            background-position: 70% 50%;
+        }
+    }
+
+    .img_show {
+        opacity: 1;
+    }
+
+    .img_none {
+        opacity: 0;
+    }
+
+    .cir-box {
+        position: absolute;
+        left: 50%;
+        margin-left: -25px;
+        bottom: 20px;
+
+        &__li-left,
+        &__li-right {
+            border: none;
+            float: left;
+            width: 10px;
+            height: 10px;
+            border-radius: 10px;
+            background: #ffffff;
+            margin: 0 5px;
+            cursor: pointer;
+            opacity: 0.8;
+            filter: alpha(opacity=80);
+        }
+
+        &__li-right {
+            background: #de000d;
+        }
+
+
+        .off-color {
+            background: #ffffff;
+        }
+
+        .on-color {
+            background: #de000d;
+        }
+    }
+
+    &__btn_left {
+        left: 15px;
+    }
+
+    &__btn_left:hover {
+        opacity: 1;
+    }
+
+    &__btn {
+        position: absolute;
+        top: 42%;
+        padding: 14px 7px;
+        font-size: 20px;
+        color: rgb(255, 255, 255);
+        background: rgba(0, 0, 0, 0.498039);
+        cursor: pointer;
+        font-family: "宋体";
+        display: block;
+        z-index: 2;
+        transition: opacity 0.3s ease;
+        opacity: 0.5;
+    }
+
+    &__btn_right {
+        right: 15px;
+    }
+
+    &__btn_right:hover {
+        opacity: 1;
+    }
+}
