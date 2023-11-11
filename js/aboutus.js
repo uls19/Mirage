@@ -11,11 +11,11 @@ window.onload = function () {
     
     }
     /*Slider main-page*/
-      var menuLi = document.querySelectorAll('.menu__link');
+      const menuLi = document.querySelectorAll('.menu__link');
     
       Array.from(menuLi).forEach(function (span) {
-        var menuOut = span.querySelectorAll('.out');
-        var menuOver = span.querySelectorAll('.over');
+        const menuOut = span.querySelectorAll('.out');
+        const menuOver = span.querySelectorAll('.over');
     
     
         span.onmouseover = function (e) {
@@ -41,10 +41,10 @@ window.onload = function () {
       });
   
   //запустить анимацию блоков при загрузке страницы
-  var blocksWindow = document.querySelectorAll('.about-window, .about-window__box');
+  const blocksWindow = document.querySelectorAll('.about-window, .about-window__box');
   
   Array.from(blocksWindow).forEach(function (span) {
-    var blockAbout = span.querySelectorAll('.about-window__box-top');
+    const blockAbout = span.querySelectorAll('.about-window__box-top');
   
     setTimeout(function() {
       blockAbout.forEach(function (element) {

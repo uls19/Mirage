@@ -12,10 +12,10 @@ navBtn.onclick = function () {
 }
 /*Slider main-page*/
 
-  var menuLi = document.querySelectorAll('.menu__link');
+  const menuLi = document.querySelectorAll('.menu__link');
   Array.from(menuLi).forEach(function (span) {
-    var menuOut = span.querySelectorAll('.out');
-    var menuOver = span.querySelectorAll('.over');
+    const menuOut = span.querySelectorAll('.out');
+    const menuOver = span.querySelectorAll('.over');
 
     span.onmouseover = function (e) {
       menuOut.forEach(function (element) {
@@ -37,12 +37,12 @@ navBtn.onclick = function () {
 
   });
 
-  var leftButtons = document.querySelectorAll('.page-box__btn_left');
-  var rightButtons = document.querySelectorAll('.page-box__btn_right');
-  var slide1El = document.querySelector('.single-slide1');
-  var slide2El = document.querySelector('.single-slide2');
-  var listOn = document.querySelector('.cir-box__li-left');
-  var listOff = document.querySelector('.cir-box__li-right');
+  const leftButtons = document.querySelectorAll('.page-box__btn_left');
+  const rightButtons = document.querySelectorAll('.page-box__btn_right');
+  const slide1El = document.querySelector('.single-slide1');
+  const slide2El = document.querySelector('.single-slide2');
+  const listOn = document.querySelector('.cir-box__li-left');
+  const listOff = document.querySelector('.cir-box__li-right');
 
   Array.from(leftButtons).forEach(function (leftButton) {
     leftButton.addEventListener('click', function () {
@@ -63,7 +63,7 @@ navBtn.onclick = function () {
   });
 
 
-  var timer; // переменная для хранения идентификатора таймера
+  let timer; // переменная для хранения идентификатора таймера
   function startTimer() {
     timer = setInterval(function () {
       // код для переключения слайдов или выполнения других действий по таймеру
@@ -79,7 +79,7 @@ navBtn.onclick = function () {
   startTimer();
 
   // Остановить таймер при наведении на основной блок
-  var mainBlock = document.querySelector('.page-box');
+  const mainBlock = document.querySelector('.page-box');
   mainBlock.addEventListener('mouseenter', function () {
     clearInterval(timer); // останавливаем таймер
   });
@@ -90,12 +90,12 @@ navBtn.onclick = function () {
   });
 
   //запустить анимацию блоков при загрузке страницы
-  var productBlocks = document.querySelectorAll('.products, .about');
+  const productBlocks = document.querySelectorAll('.products, .about');
 
   Array.from(productBlocks).forEach(function (span) {
-    var blockLeft = span.querySelectorAll('.products__left');
-    var blockRight = span.querySelectorAll('.products__right');
-    var blockAbout = span.querySelectorAll('.about__header');
+    const blockLeft = span.querySelectorAll('.products__left');
+    const blockRight = span.querySelectorAll('.products__right');
+    const blockAbout = span.querySelectorAll('.about__header');
 
     setTimeout(function () {
       blockLeft.forEach(function (element) {

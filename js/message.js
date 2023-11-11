@@ -14,11 +14,11 @@ window.onload = function () {
 
 
     /*Slider main-page*/
-    var menuLi = document.querySelectorAll('.menu__link');
+    const menuLi = document.querySelectorAll('.menu__link');
     
     Array.from(menuLi).forEach(function (span) {
-      var menuOut = span.querySelectorAll('.out');
-      var menuOver = span.querySelectorAll('.over');
+      const menuOut = span.querySelectorAll('.out');
+      const menuOver = span.querySelectorAll('.over');
   
   
       span.onmouseover = function (e) {
