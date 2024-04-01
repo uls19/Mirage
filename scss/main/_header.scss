@@ -4,25 +4,15 @@
     flex: 0 0 auto;
 }
 
-.page-box {
-    position: relative;
-    height: 630px;
-
-    &__list {
-        position: absolute;
-        margin: 0 auto;
-        left: 0;
-        right: 0;
-    }
+.mySwiper {
+    height: 600px;
 
     .single-slide1,
     .single-slide2 {
         display: block;
-        height: 630px;
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
-        transition: 0.8s;
     }
 
     .single-slide1 {
@@ -30,7 +20,7 @@
         background-color: #f3f3f3;
 
         @include mediaTablet {
-            background-position: 56% 50%;
+            background-position: 56.5% 50%;
         }
     }
 
@@ -42,76 +32,19 @@
         }
     }
 
-    .img_show {
+   .swiper-pagination {
+    bottom: 20px;
+   }
+
+   .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background: #000;
+    opacity: 0.2;
+
+    &-active {
+        background: #004a54;
         opacity: 1;
     }
-
-    .img_none {
-        opacity: 0;
-    }
-
-    .cir-box {
-        position: absolute;
-        left: 50%;
-        margin-left: -25px;
-        bottom: 20px;
-
-        &__li-left,
-        &__li-right {
-            border: none;
-            float: left;
-            width: 10px;
-            height: 10px;
-            border-radius: 10px;
-            background: #ffffff;
-            margin: 0 5px;
-            cursor: pointer;
-            opacity: 0.8;
-            filter: alpha(opacity=80);
-        }
-
-        &__li-right {
-            background: #de000d;
-        }
-
-
-        .off-color {
-            background: #ffffff;
-        }
-
-        .on-color {
-            background: #de000d;
-        }
-    }
-
-    &__btn_left {
-        left: 0px;
-    }
-
-    &__btn_left:hover {
-        opacity: 1;
-    }
-
-    &__btn {
-        position: absolute;
-        top: 42%;
-        padding: 14px 7px;
-        font-size: 20px;
-        color: rgb(255, 255, 255);
-        background: rgba(0, 0, 0, 0.498039);
-        cursor: pointer;
-        font-family: "宋体";
-        display: block;
-        z-index: 2;
-        transition: opacity 0.3s ease;
-        opacity: 0.5;
-    }
-
-    &__btn_right {
-        right: 0px;
-    }
-
-    &__btn_right:hover {
-        opacity: 1;
-    }
+   }
 }

@@ -37,58 +37,23 @@ navBtn.onclick = function () {
 
   });
 
-  const leftButtons = document.querySelectorAll('.page-box__btn_left');
-  const rightButtons = document.querySelectorAll('.page-box__btn_right');
-  const slide1El = document.querySelector('.single-slide1');
-  const slide2El = document.querySelector('.single-slide2');
-  const listOn = document.querySelector('.cir-box__li-left');
-  const listOff = document.querySelector('.cir-box__li-right');
 
-  Array.from(leftButtons).forEach(function (leftButton) {
-    leftButton.addEventListener('click', function () {
-      slide1El.classList.toggle("img_show");
-      slide2El.classList.toggle("img_none");
-      listOn.classList.toggle("on-color");
-      listOff.classList.toggle("off-color");
-    });
+  const swiper = new Swiper(".mySwiper", {
+    loop: true,
+    speed: 500,
+    spaceBetween: 0,
+    centeredSlides: true,
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
   });
 
-  Array.from(rightButtons).forEach(function (rightButton) {
-    rightButton.addEventListener('click', function () {
-      slide1El.classList.toggle("img_show");
-      slide2El.classList.toggle("img_none");
-      listOn.classList.toggle("on-color");
-      listOff.classList.toggle("off-color");
-    });
-  });
-
-
-  let timer; // переменная для хранения идентификатора таймера
-  function startTimer() {
-    timer = setInterval(function () {
-      // код для переключения слайдов или выполнения других действий по таймеру
-      slide1El.classList.toggle("img_show");
-      slide2El.classList.toggle("img_none");
-      listOn.classList.toggle("on-color");
-      listOff.classList.toggle("off-color");
-    }, 6000); // интервал времени в миллисекундах (здесь установлено 2 секунды)
-  }
-
-  // Начать запускать таймер при загрузке страницы
-
-  startTimer();
-
-  // Остановить таймер при наведении на основной блок
-  const mainBlock = document.querySelector('.page-box');
-  mainBlock.addEventListener('mouseenter', function () {
-    clearInterval(timer); // останавливаем таймер
-  });
-
-  // Возобновить таймер при уходе курсора с основного блока
-  mainBlock.addEventListener('mouseleave', function () {
-    startTimer(); // запускаем таймер снова
-  });
-
+  
   //запустить анимацию блоков при загрузке страницы
   const productBlocks = document.querySelectorAll('.products, .about');
 

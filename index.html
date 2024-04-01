@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+      <!-- Link Swiper's CSS -->
+      <link rel="stylesheet" href="./swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="./css/main.css">
 </head>
 
@@ -95,21 +97,16 @@
             </div>
         </div>
        
+ <!-- Swiper -->
+ <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide single-slide1"></div>
+      <div class="swiper-slide single-slide2"></div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
 
-        <div class="container page-box">
-            <div class="page-box__btn page-box__btn_left">&lt;</div>
-            <div class="page-box__btn page-box__btn_right">&gt;</div>
-            <ul>
-                <li class="page-box__list"><a href="#!" class="single-slide1"></a></li>
-                <li class="page-box__list"><a href="#!" class="single-slide2"></a></li>
-            </ul>
-            <ul class="cir-box">
-                <li class="cir-box__li-left"></li>
-                <li class="cir-box__li-right"></li>
-            </ul>
-
-        </div>
-    </header>
+</header>
 
     <main class="home-main">
         <div class="products none1">
@@ -277,7 +274,7 @@
                 All rights reserved.</p>
         </div>
     </footer>
-
+    <script src="./swiper/swiper-bundle.min.js"></script>
     <script src="./js/home.js"></script>
 </body>
 
