@@ -1,7 +1,0 @@
-{
-    "workbench.view.alwaysShowHeaderActions": true,
-    "workbench.editor.autoLockGroups": {
-        "imagePreview.previewEditor": true
-    },
-    "liveServer.settings.multiRootWorkspaceName": "Mirage"
-}
