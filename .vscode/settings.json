@@ -3,5 +3,5 @@
     "workbench.editor.autoLockGroups": {
         "imagePreview.previewEditor": true
     },
-    "liveServer.settings.port": 5501
+    "liveServer.settings.multiRootWorkspaceName": "Mirage"
 }

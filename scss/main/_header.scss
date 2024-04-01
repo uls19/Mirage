@@ -6,7 +6,7 @@
 
 .page-box {
     position: relative;
-    min-height: 430px;
+    height: 630px;
 
     &__list {
         position: absolute;
@@ -18,27 +18,27 @@
     .single-slide1,
     .single-slide2 {
         display: block;
-        max-width: 1280px;
-        height: 430px;
+        height: 630px;
         background-repeat: no-repeat;
         background-size: cover;
+        background-position: center;
         transition: 0.8s;
     }
 
     .single-slide1 {
-        background-image: url(./../img/Banner_1.jpg);
+        background-image: url(./../img/banner_1.webp);
         background-color: #f3f3f3;
 
         @include mediaTablet {
-            background-position: 59% 50%;
+            background-position: 56% 50%;
         }
     }
 
     .single-slide2 {
-        background-image: url(./../img/Banner_2.jpg);
+        background-image: url(./../img/banner_2.webp);
 
         @include mediaTablet {
-            background-position: 70% 50%;
+            background-position: 67% 50%;
         }
     }
 

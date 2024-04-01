@@ -64,7 +64,7 @@
             transform 1s ease,
             opacity 1s ease,
             background-size 0.8s ease;
-        z-index: 102;
+        z-index: 3;
         width: 376px;
         height: 216px;
 
@@ -80,7 +80,7 @@
     }
 
     &__left {
-        background-image: url(./../img/mekchanp1.png);
+        background-image: url(./../img/mekchanp1.webp);
         transform: translateX(-130%);
         opacity: 0;
 
@@ -91,11 +91,11 @@
     }
 
     &__left:hover {
-        background-size: 120%;
+        background-size: 110%;
     }
 
     &__right {
-        background-image: url(./../img/meqchanp2.png);
+        background-image: url(./../img/meqchanp2.webp);
         transform: translateX(130%);
         opacity: 0;
         right: 0;
@@ -108,7 +108,7 @@
     }
 
     &__right:hover {
-        background-size: 120%;
+        background-size: 110%;
     }
 
     &__link {
